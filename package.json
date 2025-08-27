@@ -34,7 +34,8 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "node dist/server.js",
-    "build": "tsc && tsc-alias",
+    "build": "tsc && tsc-alias && npm run copy-data",
+    "copy-data": "cp -r src/data/*.json dist/data/",
     "format": "prettier --write \"./**/*.{js,ts,json}\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -45,7 +46,7 @@
   },
   "simple-git-hooks": {
     "pre-commit": "npm run lint && npm run format",
-    "commit-msg": "npm run commitlint --edit $1"
+    "commit-msg": "npx commitlint --edit $1"
   },
   "dependencies": {
     "@hono/node-server": "^1.12.1",
