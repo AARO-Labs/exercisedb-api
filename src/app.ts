@@ -2,7 +2,6 @@ import { OpenAPIHono } from '@hono/zod-openapi'
 import { Scalar } from '@scalar/hono-api-reference'
 import { logger } from 'hono/logger'
 import { prettyJSON } from 'hono/pretty-json'
-import { Home } from './pages/home'
 import { Routes } from '#common/types'
 import type { HTTPException } from 'hono/http-exception'
 import { cors } from 'hono/cors'
@@ -30,7 +29,8 @@ export class App {
       route.initRoutes()
       this.app.route('/api/v1', route.controller)
     })
-    this.app.route('/', Home)
+    // Redirect root to docs
+    this.app.get('/', (c) => c.redirect('/docs'))
   }
 
   private initializeGlobalMiddleware() {
