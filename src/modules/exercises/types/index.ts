@@ -15,7 +15,7 @@ export interface GetExercisesArgs {
     equipments?: string[]
     bodyParts?: string[]
     includeSecondaryMuscles?: boolean
-    [key: string]: any
+    [key: string]: unknown
   }
   sort?: Record<string, 1 | -1>
 }

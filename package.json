@@ -1,9 +1,8 @@
 {
   "name": "exercisedb-api",
-  "description": "ExerciseDB API",
-  "repository": "https://github.com/exercisedb/exercisedb-api",
+  "description": "Fitness exercise database API",
   "version": "0.0.7",
-  "author": "ExerciseDB API",
+  "author": "",
   "license": "AGPL-3.0",
   "type": "module",
   "main": "dist/server.js",

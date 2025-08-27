@@ -63,21 +63,14 @@ export class App {
         openapi: '3.1.0',
         info: {
           version: '1.0.0',
-          title: 'ExerciseDB API - v1 (Open Source)',
-          description: `**ExerciseDB API v1** is a fully open-source and developer-friendly fitness exercise database featuring over 1,500 structured exercises with **GIF-based visual media**. It includes detailed metadata like target muscles, equipment, and body parts, designed for fast integration into fitness apps, personal trainer platforms, and health tools.
-
-**📝 NOTE**: This version is public, free to use, and includes both the **code and dataset metadata** — making it perfect for personal projects, prototypes, learning, and community-driven apps.
-
-🔗 Useful Links:
-- 💬 Need full v1 Dataset access: [Download Now](https://dub.sh/v1_plans)
-- 🚀 Explore our new v2 dataset: [v2.exercisedb.dev](https://v2.exercisedb.dev)
-- 🌐 Official Website: [exercisedb.dev](https://exercisedb.dev)`
+          title: 'Exercise Database API',
+          description:
+            'A comprehensive fitness exercise database API with 1,500+ structured exercises including detailed metadata like target muscles, equipment, and body parts.'
         },
         servers: [
           {
             url: `${protocol}//${hostname}${port ? `:${port}` : ''}`,
-            description:
-              'v1 Dataset (Open Source)\n• Public & open license\n• Code and metadata available on GitHub\n• GIF-based media\n• Ideal for demos, personal apps, and learning\n• chat support for full dataset access'
+            description: 'Exercise Database API'
           }
         ]
       }
@@ -87,7 +80,7 @@ export class App {
     this.app.get(
       '/docs',
       Scalar({
-        pageTitle: 'ExerciseDB API - v1 (Open Source)',
+        pageTitle: 'Exercise Database API',
         theme: 'kepler',
         isEditable: false,
         layout: 'modern',
@@ -95,22 +88,16 @@ export class App {
         hideDownloadButton: true,
         hideDarkModeToggle: true,
         url: '/swagger',
-        favicon: 'https://cdn.exercisedb.dev/exercisedb/favicon.ico',
         defaultOpenAllTags: true,
         hideClientButton: true,
         metaData: {
-          applicationName: 'ExerciseDB API - v1',
-          author: 'Ascend API',
-          creator: 'Ascend API',
-          publisher: 'Ascend API',
+          applicationName: 'Exercise Database API',
+          author: '',
+          creator: '',
+          publisher: '',
           ogType: 'website',
           robots: 'index follow',
-          description: `**ExerciseDB API v1** is a fully open-source exercise dataset offering 1,300+ exercises with rich metadata and GIF visualizations. Built for speed and ease of use, it's ideal for personal projects, prototypes, and education.
-
-🔗 Useful Links:
-- 💬 Chat with us for full GIF access: [Telegram](https://t.me/exercisedb)
-- 🚀 Explore our new v2 dataset: [v2.exercisedb.dev](https://v2.exercisedb.dev)
-- 🌐 Official Website: [exercisedb.dev](https://exercisedb.dev)`
+          description: 'A comprehensive fitness exercise database API with 1,500+ structured exercises.'
         }
       })
     )
@@ -121,7 +108,7 @@ export class App {
       return c.json(
         {
           success: false,
-          message: 'route not found!!. check docs at https://v1.exercisedb.dev/docs'
+          message: 'Route not found. Check docs at /docs'
         },
         404
       )

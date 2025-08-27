@@ -26,11 +26,7 @@
         },
         {
           "key": "Author",
-          "value": "ExerciseDB API"
-        },
-        {
-          "key": "Github",
-          "value": "https://github.com/exercisedb/exercisedb-api"
+          "value": "Exercise Database API"
         }
       ]
     }

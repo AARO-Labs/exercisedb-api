@@ -22,36 +22,33 @@ export const Meteors = ({ number }: { number: number }) => {
 }
 
 Home.get('/', (c) => {
-  const title = 'ExerciseDB API'
+  const title = 'Exercise Database API'
   const description =
-    'Access detailed data on over 1300+ exercises with the ExerciseDB API. This API offers extensive information on each exercise, including target body parts, equipment needed, GIFs for visual guidance, and step-by-step instructions.'
+    'Access detailed data on over 1,500 exercises with the Exercise Database API. This API offers extensive information on each exercise, including target body parts, equipment needed, and step-by-step instructions.'
   const keywords =
-    'exercisedb api, fitness exercise database api, fitness API, exercise database, workout API, fitness data API, muscle exercises, exercise gif api, gym API, exercise videos, exercise images, exercise instructions, gym workouts api ,  workouts exercises, home workouts, muscle gain workouts, weight loss exercises'
+    'exercise database api, fitness exercise database api, fitness API, exercise database, workout API, fitness data API, muscle exercises, gym API, exercise videos, exercise images, exercise instructions, gym workouts api, workouts exercises, home workouts, muscle gain workouts, weight loss exercises'
 
   return c.html(
     <html>
       <head>
-        <title>ExerciseDB API</title>
+        <title>Exercise Database API</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charset="utf-8" />
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <meta name="author" content="ExerciseDB" />
-        <meta name="author" content="Ascend API" />
+        <meta name="author" content="Exercise Database API" />
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://cdn.exercisedb.dev/exercisedb/exercisedb_banner.png" />
-        <meta property="og:url" content="https://github.com/exercisedb/exercisedb-api" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
 
         {/* Twitter Card Tags */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content="https://cdn.exercisedb.dev/exercisedb/exercisedb_banner.png" />
-
-        <link rel="icon" href="https://cdn.exercisedb.dev/exercisedb/android-chrome-512x512.png" />
+        <meta property="twitter:image" content="" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -94,7 +91,7 @@ Home.get('/', (c) => {
           <Meteors number={15} />
           <div class="flex flex-row items-center space-x-4 ml-6">
             <p class="text-2xl md:text-4xl text-transparent font-bold leading-none bg-clip-text bg-gradient-to-r from-gray-300 via-gray-500 to-gray-100">
-              ExerciseDB API
+              Exercise Database API
             </p>
           </div>
 
@@ -110,7 +107,7 @@ Home.get('/', (c) => {
                 </span>
                 <span class="text-neutral-200 font-bold text-lg sm:text-xl md:text-2xl mt-2">Explore the Docs</span>
                 <div class="text-neutral-500 mt-2">
-                  Check out the documentation to learn how to use the ExerciseDB API.
+                  Check out the documentation to learn how to use the Exercise Database API.
                 </div>
               </div>
             </a>
@@ -126,7 +123,7 @@ Home.get('/', (c) => {
                 </span>
                 <span class="text-neutral-200 font-bold text-lg sm:text-xl md:text-2xl mt-2">Open Source</span>
                 <div class="text-neutral-500 mt-2">
-                  ExerciseDB API is open-source. Check out the source code on github.
+                  Exercise Database API is open-source. Check out the source code on github.
                 </div>
               </div>
             </a>
@@ -153,26 +150,9 @@ Home.get('/', (c) => {
                 <span class="text-xs uppercase bg-opacity-15 rounded text-center max-w-fit px-2 py-1 font-bold tracking-wide bg-blue-500 text-blue-500">
                   Contact
                 </span>
-                <span class="text-neutral-200 font-bold text-lg sm:text-xl md:text-2xl mt-2">ExerciseDB API</span>
+                <span class="text-neutral-200 font-bold text-lg sm:text-xl md:text-2xl mt-2">Exercise Database API</span>
                 <div class="text-neutral-500 mt-2">
-                  Have a question or need help? Reach out on{' '}
-                  <a
-                    href="mailto:hello@exercisedb.dev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline text-indigo-500"
-                  >
-                    hello@exercisedb.dev
-                  </a>
-                  ,{' '}
-                  <a
-                    href="https://t.me/exercisedb"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline text-green-500"
-                  >
-                    Chat With Us.
-                  </a>
+                  Have a question or need help? Check the documentation or GitHub repository.
                 </div>
               </div>
             </div>

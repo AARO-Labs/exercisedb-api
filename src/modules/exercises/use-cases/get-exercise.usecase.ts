@@ -94,8 +94,8 @@ export class GetExercisesUseCase implements IUseCase<GetExercisesArgs, GetExerci
     return [...exercises].sort((a, b) => {
       for (const key of sortKeys) {
         const order = sort[key]
-        const aVal = (a as any)[key]
-        const bVal = (b as any)[key]
+        const aVal = (a as unknown as Record<string, unknown>)[key]
+        const bVal = (b as unknown as Record<string, unknown>)[key]
 
         if (aVal == null && bVal == null) continue
         if (aVal == null) return order

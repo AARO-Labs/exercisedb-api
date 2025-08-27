@@ -44,7 +44,7 @@ export class ExerciseService {
     return this.getExercisesUseCase.execute(query)
   }
   async filterExercises(params: FilterExercisesArgs) {
-    const queryFilters: any = {}
+    const queryFilters: Record<string, unknown> = {}
 
     if (params.search) {
       queryFilters.search = params.search
